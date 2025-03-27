@@ -1,0 +1,16 @@
+@use '@carbon/react';
+@use '@/components/ShellHeader/shell-header';
+@use '@/app/home/home-page';
+@use '@/app/repos/repo-page';
+
+@media (min-width: 42rem) {
+  .cds--grid--no-gutter {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+.cds--content {
+  margin-top: 3rem;
+  background: var(--cds-background);
+}
