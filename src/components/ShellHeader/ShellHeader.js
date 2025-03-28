@@ -19,7 +19,7 @@ import Link from 'next/link';
 const ShellHeader = () => (
   <HeaderContainer
     render={({ isSideNavExpanded, onClickSideNavExpand }) => (
-      <Header aria-label="Carbon Tutorial">
+      <Header aria-label="Carbon Playground">
         <SkipToContent />
         <HeaderMenuButton
           aria-label="Open menu"
@@ -27,9 +27,9 @@ const ShellHeader = () => (
           isActive={isSideNavExpanded}
         />
         <Link href="/" passHref legacyBehavior>
-          <HeaderName prefix="IBM">Carbon Tutorial</HeaderName>
+          <HeaderName prefix="GH">Carbon UI Playground</HeaderName>
         </Link>
-        <HeaderNavigation aria-label="Carbon Tutorial">
+        <HeaderNavigation aria-label="Carbon Playground">
           <Link href="/repos" passHref legacyBehavior>
             <HeaderMenuItem>Repositories</HeaderMenuItem>
           </Link>
