@@ -1,4 +1,4 @@
-`use client`;
+'use client';
 
 import RepoTable from './RepoTable';
 import {Grid, Column} from '@carbon/react';

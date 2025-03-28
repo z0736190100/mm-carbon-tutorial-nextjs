@@ -28,7 +28,8 @@ html {
 }
 
 .home-page__r2 {
-  margin-top: rem(-40px);
+  /// fixme 10px as second mandatory param - ??
+  margin-top: rem(-40px, 10px);
 }
 
 .tabs-group-content {
