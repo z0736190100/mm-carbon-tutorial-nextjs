@@ -4,6 +4,7 @@
 @use '@carbon/react/scss/theme' as *;
 @use './mixins.scss' as *;
 @use './overrides.scss';
+@use '@carbon/type';
 
 html {
   background-color: $layer-01;
@@ -23,7 +24,7 @@ html {
 }
 
 .home-page__heading {
-  @include type-style('productive-heading-05');
+  @include type.type-style('productive-heading-05');
 }
 
 .home-page__r2 {
@@ -35,7 +36,7 @@ html {
 }
 
 .home-page__subheading {
-  @include type-style('productive-heading-03');
+  @include type.type-style('productive-heading-03');
 
   font-weight: 600;
 }
