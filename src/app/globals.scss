@@ -2,6 +2,7 @@
 @use '@/components/ShellHeader/shell-header';
 @use '@/app/home/home-page';
 @use '@/app/repos/repo-page';
+@use '@carbon/react/scss/breakpoint' as *;
 
 @media (min-width: 42rem) {
   .cds--grid--no-gutter {
@@ -12,5 +13,14 @@
 
 .cds--content {
   margin-top: 3rem;
+  padding: 0;
   background: var(--cds-background);
+}
+
+.cds--content .cds--css-grid {
+  max-width: 100%;
+  @include breakpoint(md) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
