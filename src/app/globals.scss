@@ -1,8 +1,11 @@
 @use '@carbon/react';
-@use '@/components/ShellHeader/shell-header';
+@use '@carbon/react/scss/breakpoint' as *;
+/// pages
 @use '@/app/home/home-page';
 @use '@/app/repos/repo-page';
-@use '@carbon/react/scss/breakpoint' as *;
+/// components
+@use '@/components/ShellHeader/shell-header';
+@use '@/components/Info/info';
 
 @media (min-width: 42rem) {
   .cds--grid--no-gutter {
