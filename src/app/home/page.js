@@ -103,7 +103,7 @@ export default function HomePage() {
                     </TabPanels>
                 </Tabs>
             </Column>
-            <Grid>
+            <Column lg={16} md={8} sm={4} className="landing-page__r3">
                 <InfoSection heading="The Principles">
                     <InfoCard
                         heading="Carbon is Open"
@@ -121,7 +121,7 @@ export default function HomePage() {
                         icon={() => <Globe size={32}/>}
                     />
                 </InfoSection>
-            </Grid>
+            </Column>
         </Grid>
     );
 }
