@@ -1,38 +1,85 @@
-# Step 1
+![Home page and table example, see Repositories tab](public/readme-demo.png)
 
-# Carbon Tutorial for NextJS 13
+# Carbon UI + Next.js App
 
-This tutorial will guide you in creating a NextJS app with the [Carbon Design System](https://www.carbondesignsystem.com/). We’ll teach you the ins and outs of using Carbon React components, while introducing web development best practices along the way.
+An example Next.js 13 application demonstrating the IBM Carbon Design System in React. It showcases a landing page built with Carbon components and a repositories page that fetches and displays public repositories from the `carbon-design-system` GitHub organization using Octokit.
 
-Get started by visiting the [tutorial instructions](https://carbondesignsystem.com/developing/next-tutorial/overview/).
+## Overview
 
-## Create NextJS 13 app
+- Framework: Next.js 13 (App Router)
+- UI: IBM Carbon Design System (`@carbon/react`, `@carbon/pictograms-react`)
+- Data: GitHub REST API via `@octokit/core`
+- Styling: Sass
+
+## Features
+
+- Home/Landing page with Carbon layout, tabs, and info cards.
+- Repositories page that:
+  - Calls GitHub API for `carbon-design-system` org repos.
+  - Displays data in a Carbon `DataTable` with pagination.
+  - Provides quick links to GitHub and project homepages.
+
+## Getting started
+
+Prerequisites: Node.js 16+ and Yarn.
+
+Install dependencies:
 
 ```bash
-yarn create next-app
+yarn install
+```
 
-✔ What is your project named? … next-base
-✔ Would you like to use TypeScript? … *No / Yes
-✔ Would you like to use ESLint? … No / *Yes
-✔ Would you like to use Tailwind CSS? … *No / Yes
-✔ Would you like to use `src/` directory? … No / *Yes
-✔ Would you like to use App Router? (recommended) … No / *Yes
-✔ Would you like to customize the default import alias? … *No / Yes
+Run the development server:
 
-cd carbon-tutorial-next
+```bash
 yarn dev
 ```
 
-Configure paths in `jsconfig.json`
+Build for production:
+
+```bash
+yarn build
+```
+
+Start the production server:
+
+```bash
+yarn start
+```
+
+## Available scripts
+
+- `yarn dev` — start Next.js in development mode
+- `yarn build` — build the app
+- `yarn start` — run the production build
+- `yarn lint` — run Next.js ESLint
+- `yarn format` — format code with Prettier
+- `yarn format:diff` — list files that would be formatted
+
+## Project structure
 
 ```
-{
-  "compilerOptions": {
-    "baseUrl": "./src",
-    "paths": {
-      "@/components/*": ["components/*"],
-      "@/app/*": ["app/*"]
-   }
-  }
-}
+src/
+  app/
+    page.js            # Routes to the landing page
+    home/page.js       # Landing page implementation
+    repos/
+      page.js          # Repositories listing (GitHub API via Octokit)
+      RepoTable.js     # DataTable wrapper for repo rows
+public/
+  tab-illo.png         # Illustration used on the landing page
 ```
+
+Key config files:
+
+- `next.config.js` — Next.js configuration
+- `jsconfig.json` — path aliases for `@/components/*` and `@/app/*`
+- `package.json` — scripts and dependencies
+
+## Notes
+
+- The repos page makes unauthenticated requests to the GitHub API, which are rate‑limited. If you hit rate limits, consider authenticating Octokit.
+
+## License
+
+Licensed under the Apache-2.0 License. See the `license` field in `package.json`.
